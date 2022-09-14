@@ -1,11 +1,79 @@
-#header {
+/*The CSS selector for the id attribute is a "#", to allow us style elements that carry the corresponding id*/
+/*The CSS selector for the class attribute is ".", to allow us style elements that carry the corresponding class*/
+/*The id was changed so we have to change the id for the CSS Selector*/
+/*User-friendliness should always be considered when building web-pages, and CSS helps facilitate that*/
+#header-title {
   color: #0B3C49;
 }
 
-button {
+#footer-title {
+  color: #000000;
+}
+
+#num {
+  border: 1px solid #000000;
+  padding: 4px 8px;
+  width: fit-content;
+}
+
+.button {
   background-color: #0B3C49;
   border: 1px solid #0B3C49;
   color: white;
   padding: 4px 8px;
   margin: 20px 0 0 0;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #9cd4e3;
+  color: black;
+  cursor:pointer;
+}
+
+/* Add a black background color to the top navigation */
+.navmenu {
+  background-color: #fff;
+  color: #0B3C49;
+}
+
+/* Style the links inside the navigation bar */
+.navmenu a {
+  color: #0B3C49;
+  text-align: left;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navmenu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navmenu a.active {
+  background-color: #9cd4e3;
+  color: black;
+}
+
+.remove-margin{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.footer {
+  margin: 50px 0 0 0;
+  background-color: #ddd;
+  padding: 4px 8px;
+  width: 30%;
+}
+
+.footer a {
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
 }

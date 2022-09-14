@@ -1,5 +1,13 @@
 function goToAboutPage() {
-  window.location.href = "about.html";
+  window.location.href = "/about.html";
+}
+
+function goToHomePage() {
+  window.location.href = "/index.html";
+}
+
+function goToGamePage() {
+  window.location.href = "/game.html";
 }
 
 function goBack() {

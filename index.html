@@ -1,42 +1,58 @@
 <!DOCTYPE html>
+<!--The html element (or tag) encloses the head and body elements and has a lang attribute to declare the language of the web page.-->
+<html lang="en">
+
 <head>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="styles.css" />
+    <!--  The title element is required in any HTML document, and it goes into the head element.-->
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!--The script tag can be in either the head or the body of the page, in most cases, it is better to place it in the body just above the closing body element. -->
+    <!--The reason for this is so that the page can load the HTML and CSS before the JavaScript.-->
+    <!--Regardless, the position of the script tag also depends on the importance and the function of the script running therein.-->
+    <script src="script.js"></script>
 </head>
-<html>
-  <body>
-    <h2 id="header">Hi!</h2>
-    <p>
-      A few mistakes are scattered around these files.<br />The code works, but
-      it's not very clean, and the author didn't follow best practices.<br />Happy
-      hunting!
-    </p>
-    <h1 id="header">Useful links</h1>
-    <p>
-      •
-      <a
-        role="button"
-        id="about-us"
-        onclick="goToAboutPage()"
-        style="text-decoration: underline; cursor: pointer"
-        >About us</a
-      >
-      <br />
-      •
-      <a
-        href="https://www.lovecircular.com/contact"
-        aria-label="If you find that you need additional 
-assistance in navigating or accessing the content of this website, 
-please write to someone@lovecircular.com"
-        title="If you find that you need additional 
-      assistance in navigating or accessing the content of this website, 
-      please write to someone@lovecircular.com"
-      >
-        Contact
-      </a>
-      <br />
-      •
-      <a href="game.html">Random number game</a>
-    </p>
-  </body>
+
+<body>
+<!--The top section of a web page is best put in the header element, this can contain the navigation and in some cases a hero section-->
+<header>
+    <!--A navigation menu to enable users easily access the available pages of the website is essential.-->
+    <nav>
+        <!--  A div element can be used here to manage this section of code-->
+        <div class="navmenu">
+            <a class="active" href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/game.html">Game</a>
+            <a href="https://www.lovecircular.com/contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<!--    It is best to use a more specific term as the id, as a rule of thumb, generic words and words that already exists as HTML elements shouldn't be used.-->
+<!--    header isn't ideal as an id or identifier because header already exists as an element in HTML.-->
+<!--In this case the choice of the h tag is inconsequential, but the h tags are usually used to rank your content, it is always best to start from and use the h1 tag for headings, h2 for subheadings and so on-->
+<h1 id="header-title">Hi!</h1>
+
+<!--The "<br>" element can come in handy, but where it can be avoided, it should be avoided as it is not ideal for larger blocks of texts-->
+<!--The <br> element can prove a bit stressful especially when trying to establish responsiveness in a web page-->
+<!--It is better to put every line in a <p> element, then wrap them in a <div> and target the required classes to that <div>-->
+<!--If the aim is to remove the space in between the lines, a class with margin (bottom and top) - 0px can be targeted to the element-->
+<p class="remove-margin">A few mistakes are scattered around these files. </p>
+<p class="remove-margin">The code works, but it's not very clean, and the author didn't follow best practices.</p>
+<p class="remove-margin">Happy hunting!</p>
+
+<!--Items at the bottom of a web page are best put in a footer, this usually contains useful links, social media links and contact information-->
+<footer class="footer">
+    <ul>
+        <h3 id="footer-title">Useful links</h3>
+<!--        It isn't exactly advisable (and necessary) to include "onclick" on the <a> element, the main required attribute is the href-->
+<!--        The <a> element by default has the "text-decoration: underline" and "cursor: pointer" properties, so unless you want to change them, it isn't so necessary to include them-->
+<!--        aria-label is more suited to the button element as it is a property that assists with accessibility-->
+        <li> <p> <a href="about.html">About Us</a> </p> </li>
+        <li> <p> <a href=game.html">Random Number Game</a> </p> </li>
+        <li> <p> <a href="https://www.lovecircular.com/contact">Contact Us</a> </p> </li>
+    </ul>
+</footer>
+
+</body>
 </html>

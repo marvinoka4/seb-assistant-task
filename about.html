@@ -1,12 +1,58 @@
 <!DOCTYPE html>
+<!--The html element (or tag) encloses the head and body elements and has a lang attribute to declare the language of the web page.-->
+<html lang="en">
+
 <head>
-  <script src="script.js"></script>
+  <!--  The title element is required in any HTML document, and it goes into the head element.-->
+  <title>About</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <!--The script tag can be in either the head or the body of the page, in most cases, it is better to place it in the body just above the closing body element. -->
+  <!--The reason for this is so that the page can load the HTML and CSS before the JavaScript.-->
+  <!--Regardless, the position of the script tag also depends on the importance and the function of the script running therein.-->
+  <script src="script.js"></script>
 </head>
-<html>
-  <body>
-    <h2 id="header">About us</h2>
-    <div>Nothing to see here!</div>
-    <button onclick="goBack()">Back to homepage</button>
-  </body>
+
+<body>
+<!--The top section of a web page is best put in the header element, this can contain the navigation and in some cases a hero section-->
+<header>
+  <!--A navigation menu to enable users easily access the available pages of the website is essential.-->
+  <nav>
+    <!--  A div element can be used here to manage this section of code-->
+    <div class="navmenu">
+      <a href="/index.html">Home</a>
+      <a class="active" href="/about.html">About</a>
+      <a href="/game.html">Game</a>
+      <a href="https://www.lovecircular.com/contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!--    It is best to use a more specific term as the id, as a rule of thumb, generic words and words that already exists as HTML elements shouldn't be used.-->
+<!--    header isn't ideal as an id or identifier because header already exists as an element in HTML.-->
+<!--In this case the choice of the h tag is inconsequential, but the h tags are usually used to rank your content, it is always best to start from and use the h1 tag for headings, h2 for subheadings and so on-->
+<h1 id="header-title">About us</h1>
+
+<!--    The div element creates a container, it is better and neater to use a p tag for text, and if a section is needed for a block of code, it can be put in a div element.-->
+<!--    The div element also works and because it does, a number of people tend to abuse its usage, but why would you create a container when all you need is a line of text?-->
+<!--See better use of div element on line 20 above-->
+<p class="padding">Nothing to see here!</p>
+
+<!--If the button is directed at the homepage, then let the function lead to the homepage, the problem with history.back() is that it depends on the history of the page, what if the user navigated to the About page from the Number Game page?-->
+<button class="button" type="button" onclick="goToHomePage()"> Back to Homepage </button>
+
+<footer class="footer">
+  <ul>
+    <h3 id="footer-title">Useful links</h3>
+    <!--        It isn't exactly advisable (and necessary) to include "onclick" on the <a> element, the main required attribute is the href-->
+    <!--        The <a> element by default has the "text-decoration: underline" and "cursor: pointer" properties, so unless you want to change them, it isn't so necessary to include them-->
+    <!--        aria-label is more suited to the button element as it is a property that assists with accessibility-->
+    <li> <p> <a href="about.html">About Us</a> </p> </li>
+    <li> <p> <a href=game.html">Random Number Game</a> </p> </li>
+    <li> <p> <a href="https://www.lovecircular.com/contact">Contact Us</a> </p> </li>
+  </ul>
+</footer>
+
+</body>
+
 </html>
